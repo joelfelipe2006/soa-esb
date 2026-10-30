@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.senai.fatesg</groupId>
+    <artifactId>soa-esb</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <name>SOA com ESB</name>
+    <description>Arquitetura Orientada a Serviços com Enterprise Service Bus - Desenvolvimento de Sistemas Distribuídos (ADS / SENAI FATESG)</description>
+
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- Sem dependências externas: só o JDK (com.sun.net.httpserver, java.net.http, javax.xml) -->
+
+    <build>
+        <finalName>soa-esb</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>br.senai.fatesg.soa.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
